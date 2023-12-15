@@ -30,7 +30,7 @@ server.get("/users", (req, res) => {
     if (err) {
       //Hanterar fel:
       console.log(err);
-      res.status(500).send(err);
+      res.status(500).send(err); //500-599 server
     } else {
       //skickar tillbaka hämtade rader
       console.log(rows);
