@@ -24,7 +24,7 @@ server.get("/users", (req, res) => {
   //Uppgift 3:
   const db = new sqlite3.Database("./gik339-labb2.db"); //skapar databaskoppling
   const sql = `SELECT * FROM users`; //frågan som skickas in läggs i variabeln sql
-
+  
   //metoden för att köra SQL-frågan.
   db.all(sql, (err, rows) => {
     if (err) {
@@ -33,7 +33,7 @@ server.get("/users", (req, res) => {
       res.status(500).send(err); //500-599 server
     } else {
       //skickar tillbaka hämtade rader
-      console.log(rows);
+      // console.log(rows);
       res.send(rows);
     }
   });
